@@ -1,6 +1,6 @@
 import { randomUUID } from 'crypto';
-import { SendNotification } from './send-notification.use-case';
-import { InMemoryNotificationsRepository } from '../../../test/repositories/in-memory-notifications.repository';
+import { SendNotification } from '@application/use-cases/send-notification.use-case';
+import { InMemoryNotificationsRepository } from '@test/repositories/in-memory-notifications.repository';
 
 describe('Send notification', () => {
   it('should be able to send a notification', async () => {

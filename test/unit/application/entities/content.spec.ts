@@ -1,4 +1,4 @@
-import { Content } from './content.value-object';
+import { Content } from '@application/entities';
 
 describe('Notification content', () => {
   it('should be able to create a notification content', () => {
