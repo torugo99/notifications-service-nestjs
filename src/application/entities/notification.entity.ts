@@ -1,6 +1,6 @@
-import { Replace } from 'src/helpers';
-import { Content } from './content.value-object';
 import { randomUUID } from 'crypto';
+import { Content } from './content.value-object';
+import { Replace } from '@helpers/Replace';
 
 export interface NotificationProps {
   recipientId: string;
