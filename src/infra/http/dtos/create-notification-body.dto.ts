@@ -3,7 +3,7 @@ import { IsNotEmpty, IsUUID } from 'class-validator';
 export class CreateNotificationBody {
   @IsNotEmpty({ message: 'RecipientId is required' })
   @IsUUID()
-  recipient_id: string;
+  recipientId: string;
 
   @IsNotEmpty()
   content: string;
