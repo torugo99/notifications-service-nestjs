@@ -1,6 +1,6 @@
 import { CancelNotification } from '@application/use-cases';
 import { NotificationNotFound } from '@application/use-cases/errors';
-import { makeNotification } from '@test/factories/notification-factory';
+import { makeNotification } from '@test/factories/notification.factory';
 import { InMemoryNotificationsRepository } from '@test/repositories/in-memory-notifications.repository';
 import { randomUUID } from 'crypto';
 

@@ -1,5 +1,5 @@
 import { GetRecipientNotification } from '@application/use-cases';
-import { makeNotification } from '@test/factories/notification-factory';
+import { makeNotification } from '@test/factories/notification.factory';
 import { InMemoryNotificationsRepository } from '@test/repositories/in-memory-notifications.repository';
 
 describe('Get recipient notification', () => {
