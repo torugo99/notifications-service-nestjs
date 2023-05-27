@@ -9,7 +9,9 @@ import {
   SendNotification,
   UnreadNotification,
 } from '@application/use-cases';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Notifications')
 @Controller('notifications')
 export class NotificationController {
   constructor(
@@ -21,6 +23,7 @@ export class NotificationController {
     private getRecipientNotification: GetRecipientNotification,
   ) {}
 
+  @ApiOperation({ summary: 'Send notification' })
   @Post()
   async create(@Body() body: CreateNotificationBody) {
     const { recipientId, content, category } = body;
@@ -34,6 +37,7 @@ export class NotificationController {
     return NotificationViewModel.toHTTP(notification);
   }
 
+  @ApiOperation({ summary: 'Count recipient notification' })
   @Get('count/from/:recipientId')
   async countFromRecipient(
     @Param('recipientId') recipientId: string,
@@ -47,6 +51,7 @@ export class NotificationController {
     };
   }
 
+  @ApiOperation({ summary: 'Get recipient notification' })
   @Get('from/:recipientId')
   async getFromRecipient(@Param('recipientId') recipientId: string) {
     const { notifications } = await this.getRecipientNotification.execute({
@@ -58,6 +63,7 @@ export class NotificationController {
     };
   }
 
+  @ApiOperation({ summary: 'Read notification' })
   @Patch(':id/read')
   async read(@Param('id') id: string) {
     await this.readNotification.execute({
@@ -65,6 +71,7 @@ export class NotificationController {
     });
   }
 
+  @ApiOperation({ summary: 'Unread notification' })
   @Patch(':id/unread')
   async unread(@Param('id') id: string) {
     await this.unreadNotification.execute({
@@ -72,6 +79,7 @@ export class NotificationController {
     });
   }
 
+  @ApiOperation({ summary: 'Cancel notification' })
   @Patch(':id/cancel')
   async cancel(@Param('id') id: string) {
     await this.cancelNotification.execute({
