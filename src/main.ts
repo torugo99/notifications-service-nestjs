@@ -28,7 +28,7 @@ async function bootstrap() {
   await app.startAllMicroservices();
 
   const config = new DocumentBuilder()
-    .setTitle('collaborator-service')
+    .setTitle('notifications-service')
     .setDescription('Notification service')
     .setVersion('1.0.0')
     .setContact('Victor99dev', 'https://github.com/torugo99', '')
