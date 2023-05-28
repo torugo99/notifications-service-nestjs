@@ -1,6 +1,8 @@
+import { KafkaConsumerService } from './infra/messaging/kafka/kafka-consumer.service';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe, VersioningType } from '@nestjs/common';
+import { MicroserviceOptions } from '@nestjs/microservices';
 import {
   DocumentBuilder,
   SwaggerDocumentOptions,
@@ -16,6 +18,14 @@ async function bootstrap() {
     type: VersioningType.URI,
     prefix: 'api/v',
   });
+
+  const kafkaConsumerService = app.get(KafkaConsumerService);
+
+  app.connectMicroservice<MicroserviceOptions>({
+    strategy: kafkaConsumerService,
+  });
+
+  await app.startAllMicroservices();
 
   const config = new DocumentBuilder()
     .setTitle('collaborator-service')
@@ -37,6 +47,7 @@ async function bootstrap() {
   SwaggerModule.setup('swagger-ui', app, document);
 
   app.enableCors();
+
   await app.listen(3000, () => {
     console.log('Server is listening on http://localhost:3000/swagger-ui');
   });
