@@ -1,73 +1,77 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+# 🔔 | Notifications Service.
+
+## 💻 | Project: Building a Notifications API.
+
+Welcome, this project was made with the aim of creating an API with NestJs using typescript.
+##### [ 🇧🇷 Leia esta página em Português | Read this page in Português](./docs/README-pt.md)
+
+- Put some concepts into practice and use them with a microservice.
+- Use of the nestjs framework.
+- Use of the typescript language.
+- Use of PostgreSQL database, running locally in container via Docker.
+- Use of messages with Apache Kafka.
+
+## ⚙ | API.
+
+### ✔ | Technologies:
+- Node v18.15.0
+- npm v9.6.5
+- NestJs v9.4.2
+- Prisma v4.13.0
+- kafkajs: v2.2.4,
+
+### 📁 | A brief overview of the project:
+
+Participation in rocketseat free Ingite Lab in 2022. Objective to create a notification microservice with nestjs, kafka and prisma.
+
+## 📝 | API:
+
+To access the API, just click on the links below:
+- [Link LocalHost with Swagger](http://localhost:3000/swagger-ui).
+- Use [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/).
+
+Swagger view:
+
+![preview1 img](/docs/img/swagger-ui.png)
+
+### 🌐 | Endpoints:
+The expected endpoints are working perfectly.
+
+<details><summary>Notification Endpoints</summary>
+<p>
+
+| Verbo  | Endpoint                  | Parameter | Body             |
+|--------|---------------------------|-----------|------------------|
+| POST   | /notifications            | N/A   | Schema notifications |
+| GET    | /notifications/count/from/{recipientId} | code   | N/A    |
+| GET    | /notifications/from/{recipientId} | code        | N/A    |
+| PATCH  | /notifications/{id}/read          | code        | N/A    |
+| PATCH  | /notifications/{id}/unread        | code        | N/A    |
+| PATCH  | /notifications/{id}/cancel        | code        | N/A    |
+
 </p>
+</details>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+The schema (model) of the endpoints are used to pass the mandatory fields like in POST and PUT verbs.
 
-## Description
+All requests like GET, POST, PATCH are working.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<b>Follow the list of commits to check what was implemented and changed! I use the Conventional Commits Pattern to help and detail the context of each commit made.</b>
 
-## Installation
+## 👩‍💻 My Links:
 
-```bash
-$ npm install
-```
+- Github: [Victor Hugo.](https://github.com/torugo99)
+- LinkedIn: [Victor Hugo.](https://www.linkedin.com/in/victor-hugo99/)
+- Meu Site: [Victor99dev.](http://victor99dev.website/)
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+### 😀 | Credits and Thanks:
+- All Nestjs information, whether commands or any other information were taken from the official documentation.
+- Documents: 
+    - [NestJs](https://docs.nestjs.com/)
+    - [Swagger](https://docs.nestjs.com/openapi/introduction)
+    - [Prisma](https://www.prisma.io/docs)
+    - [Docker](https://docs.docker.com/)
+    - [Kafka](https://docs.nestjs.com/microservices/kafka)
+- Upstash is where I ran my kafka messaging service: [link](https://upstash.com/) 
+- Dbeaver is where I access my databases: [Link](https://dbeaver.io/)
