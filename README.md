@@ -62,7 +62,7 @@ All requests like GET, POST, PATCH are working.
 
 - Github: [Victor Hugo.](https://github.com/torugo99)
 - LinkedIn: [Victor Hugo.](https://www.linkedin.com/in/victor-hugo99/)
-- Meu Site: [Victor99dev.](http://victor99dev.website/)
+- My Website: [Victor99dev.](http://victor99dev.website/)
 
 ### 😀 | Credits and Thanks:
 - All Nestjs information, whether commands or any other information were taken from the official documentation.
