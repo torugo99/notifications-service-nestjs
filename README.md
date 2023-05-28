@@ -52,7 +52,6 @@ The expected endpoints are working perfectly.
 </p>
 </details>
 
-
 The schema (model) of the endpoints are used to pass the mandatory fields like in POST and PUT verbs.
 
 All requests like GET, POST, PATCH are working.
